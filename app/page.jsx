@@ -9,7 +9,8 @@ export const metadata = {
 };
 
 const hero = `
-# Healthcare ERP for Home Care & Telemedicine Continuity
+# Healthcare ERP for Post-Discharge & Home Care Continuity
+Built for hospitals, home care agencies, and regional healthcare networks.
 
 **AURA (Automated Unified Resource Architecture)** connects hospitals, home care providers, and telemedicine services into one interoperable platform—starting with **post-hospital discharge and home nursing coordination** for elderly and chronic patients.
 
@@ -34,7 +35,8 @@ AURA is not a generic telemedicine app. It is **healthcare operations software**
 - Digital care plans, tasks, and caregiver coordination  
 - Remote follow-ups (telemedicine) integrated into workflows  
 - Dashboards and reporting for providers and institutions  
-- Secure data exchange designed to integrate with hospital systems using widely adopted healthcare interoperability standards
+- Secure data exchange designed to integrate with hospital systems using widely adopted healthcare interoperability standards.
+- Privacy-by-design architecture (GDPR-aligned by design)
 `;
 
 const differentiation = `
@@ -74,7 +76,8 @@ export default function Page() {
         <Markdown content={hero} className="mb-6" />
         <div className="flex flex-wrap gap-3">
           <a
-            href="mailto:snomes@gmail.com?subject=Logis-Health%20Pilot%20Interest"
+            href="mailto:snomes@gmail.com?subject=Logis-Health%20Pilot%20Discussion%20(Lithuania)
+"
             className="px-4 py-2 rounded-md bg-black text-white"
           >
             Request a Pilot
@@ -165,7 +168,7 @@ export default function Page() {
       </div>
 
       <footer className="text-xs text-gray-500 pt-6">
-        © {new Date().getFullYear()} Logis-Health. All rights reserved.
+        © {new Date().getFullYear()} Logis-Health — Building in Lithuania for EU healthcare systems
       </footer>
     </>
   );
