@@ -1,133 +1,173 @@
-import Link from 'next/link';
-import { Card } from 'components/card';
-import { ContextAlert } from 'components/context-alert';
-import { Markdown } from 'components/markdown';
+import Link from "next/link";
+import { Card } from "components/card";
+import { Markdown } from "components/markdown";
 
 export const metadata = {
-    title: 'Redirects & Rewrites'
+  title: "Logis-Health | AURA – Healthcare ERP for Home Care Continuity",
+  description:
+    "AURA is a healthcare ERP platform connecting hospitals, home care providers, and telemedicine into one interoperable post-discharge care system."
 };
 
-const explainer = `
-Next.js supports [redirects](https://nextjs.org/docs/app/api-reference/next-config-js/redirects) and [rewrites](https://nextjs.org/docs/app/api-reference/next-config-js/rewrites) configured in \`next.config.js\`.
+const hero = `
+# Healthcare ERP for Home Care & Telemedicine Continuity
 
-**Redirects** change the URL in the browser and send the user to a different location. They're useful for:
-- Moving content to new locations
-- Forwarding users to external sites
-- Creating URL aliases with SEO-friendly permanent redirects
+**AURA (Automated Unified Resource Architecture)** connects hospitals, home care providers, and telemedicine services into one interoperable platform—starting with **post-hospital discharge and home nursing coordination** for elderly and chronic patients.
 
-**Rewrites** proxy the request to a different path without changing the URL in the browser. They're useful for:
-- Creating cleaner URLs that map to complex paths
-- API endpoint aliases
-- Migrating from old URL structures without breaking links
-
-This site demonstrates both with several examples you can try below.
+**Built as B2B SaaS • Privacy-by-design (GDPR-aligned) • Interoperability-first**
 `;
 
-const redirectsSnippet = `
-### Redirects
+const problem = `
+## The Problem
 
-~~~js
-// next.config.js
-redirects() {
-  return [
-    {
-      source: '/docs',
-      destination: 'https://docs.netlify.com/frameworks/next-js/overview/',
-      permanent: false, // Temporary (307)
-    },
-    {
-      source: '/old-blog/:slug',
-      destination: '/classics',
-      permanent: true, // Permanent (308)
-    },
-    {
-      source: '/github',
-      destination: 'https://github.com/netlify-templates/next-platform-starter',
-      permanent: false,
-    },
-    {
-      source: '/home',
-      destination: '/',
-      permanent: true,
-    },
-  ];
-}
-~~~
+Hospital systems are increasingly digitized, but once a patient is discharged, care becomes fragmented:
+
+- Home care teams often lack access to hospital context and updated care plans  
+- Coordination happens through manual calls, spreadsheets, and disconnected tools  
+- This increases administrative workload and contributes to avoidable readmissions
 `;
 
-const rewritesSnippet = `
-### Rewrites
+const solution = `
+## The Solution
 
-~~~js
-// next.config.js
-rewrites() {
-  return [
-    {
-      source: '/api/health',
-      destination: '/quotes/random', // Proxies to the quotes API
-    },
-    {
-      source: '/blog',
-      destination: '/classics', // Shows classics content under /blog URL
-    },
-  ];
-}
-~~~
+AURA is not a generic telemedicine app. It is **healthcare operations software** designed for continuity of care beyond hospital walls:
+
+- Digital care plans, tasks, and caregiver coordination  
+- Remote follow-ups (telemedicine) integrated into workflows  
+- Dashboards and reporting for providers and institutions  
+- Secure data exchange designed to integrate with hospital systems using widely adopted healthcare interoperability standards
+`;
+
+const differentiation = `
+## Why AURA is Different
+
+Most tools focus on video consultations. AURA focuses on **operations + continuity**:
+
+- Works for real home care delivery (tasks, visits, coordination, reporting)
+- Designed for interoperability with hospital environments
+- Built for regulated EU healthcare contexts (privacy-by-design)
+`;
+
+const roadmap = `
+## Roadmap
+
+- **Months 0–2:** Requirements discovery, workflow mapping, clickable prototype  
+- **Months 3–6:** MVP development (core care plans, tasking, coordination, reporting)  
+- **Months 6–9:** Pilot deployments with providers (Lithuania / EU)  
+- **Months 9–12:** Production-ready v1 and expansion planning
+`;
+
+const lithuania = `
+## Why Lithuania
+
+Lithuania is an ideal base to build and validate a digital health platform:
+
+- Mature digital public services and advanced eHealth ecosystem  
+- Strong software engineering talent and startup environment  
+- Strategic location to scale across the Baltics and the wider EU
 `;
 
 export default function Page() {
-    return (
-        <>
-            <ContextAlert className="mb-6" />
-            <h1 className="mb-8">Redirects & Rewrites</h1>
-            <Markdown content={explainer} className="mb-8" />
+  return (
+    <>
+      {/* HERO */}
+      <div className="mb-10">
+        <Markdown content={hero} className="mb-6" />
+        <div className="flex flex-wrap gap-3">
+          <a
+            href="mailto:snomes@gmail.com?subject=Logis-Health%20Pilot%20Interest"
+            className="px-4 py-2 rounded-md bg-black text-white"
+          >
+            Request a Pilot
+          </a>
 
-            <div className="grid gap-6 mb-8 md:grid-cols-2">
-                <Card title="Try Redirects">
-                    <p className="mb-4">These links will redirect you to a different URL (notice the URL change in your browser):</p>
-                    <ul className="space-y-2">
-                        <li>
-                            <Link href="/docs" className="link">
-                                /docs → Netlify Docs
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href="/github" className="link">
-                                /github → GitHub Repo
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href="/home" className="link">
-                                /home → Homepage
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href="/old-blog/example" className="link">
-                                /old-blog/:slug → /classics
-                            </Link>
-                        </li>
-                    </ul>
-                </Card>
+          {/* Replace href below once you add your PDF file into /public */}
+          <Link
+            href="/Logis-Health-1page.pdf"
+            className="px-4 py-2 rounded-md border border-gray-300"
+          >
+            Download 1-page summary (PDF)
+          </Link>
 
-                <Card title="Try Rewrites">
-                    <p className="mb-4">These links use rewrites to show different content while keeping the URL (notice the URL stays the same):</p>
-                    <ul className="space-y-2">
-                        <li>
-                            <Link href="/api/health" className="link">
-                                /api/health → Shows random quote
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href="/blog" className="link">
-                                /blog → Shows classics page
-                            </Link>
-                        </li>
-                    </ul>
-                </Card>
-            </div>
+          <Link
+            href="#contact"
+            className="px-4 py-2 rounded-md border border-gray-300"
+          >
+            Contact
+          </Link>
+        </div>
+      </div>
 
-            <Markdown content={redirectsSnippet} className="mb-8" />
-            <Markdown content={rewritesSnippet} />
-        </>
-    );
+      {/* 2-column section */}
+      <div className="grid gap-6 mb-10 md:grid-cols-2">
+        <Card title="Problem">
+          <Markdown content={problem} />
+        </Card>
+
+        <Card title="Solution">
+          <Markdown content={solution} />
+        </Card>
+      </div>
+
+      <div className="grid gap-6 mb-10 md:grid-cols-2">
+        <Card title="Differentiation">
+          <Markdown content={differentiation} />
+        </Card>
+
+        <Card title="Roadmap">
+          <Markdown content={roadmap} />
+        </Card>
+      </div>
+
+      <div className="grid gap-6 mb-10 md:grid-cols-2">
+        <Card title="Why Lithuania">
+          <Markdown content={lithuania} />
+        </Card>
+
+        <Card title="Founder">
+          <div className="space-y-3">
+            <p className="text-sm">
+              <strong>Nouman Saeed</strong> — Founder &amp; CEO
+            </p>
+            <p className="text-sm">
+              18+ years experience in digital transformation and healthcare
+              systems, combining technical leadership and execution in regulated
+              environments.
+            </p>
+            <p className="text-sm">
+              Building Logis-Health as a Lithuania-based company with EU-wide
+              scalability.
+            </p>
+          </div>
+        </Card>
+      </div>
+
+      {/* CONTACT */}
+      <div id="contact" className="mb-4">
+        <Card title="Contact">
+          <div className="space-y-2 text-sm">
+            <p>
+              Email:{" "}
+              <a className="underline" href="mailto:snomes@gmail.com">
+                snomes@gmail.com
+              </a>
+            </p>
+            <p>Phone: +966 50 940 4979</p>
+            <p>
+              LinkedIn / Website: <span className="text-gray-500">(add link)</span>
+            </p>
+            <p className="pt-2 text-gray-600">
+              If you are a hospital, home care provider, or healthcare network
+              interested in pilots, please email with your organization name and
+              use case.
+            </p>
+          </div>
+        </Card>
+      </div>
+
+      <footer className="text-xs text-gray-500 pt-6">
+        © {new Date().getFullYear()} Logis-Health. All rights reserved.
+      </footer>
+    </>
+  );
 }
+
