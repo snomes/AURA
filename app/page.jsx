@@ -126,6 +126,8 @@ export default function Page() {
           <Markdown content={lithuania} />
         </Card>
 
+      </div>
+
       
 
       {/* CONTACT */}
