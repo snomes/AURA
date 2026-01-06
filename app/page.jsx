@@ -126,23 +126,7 @@ export default function Page() {
           <Markdown content={lithuania} />
         </Card>
 
-        <Card title="Founder">
-          <div className="space-y-3">
-            <p className="text-sm">
-              <strong>Nouman Saeed</strong> — Founder &amp; CEO
-            </p>
-            <p className="text-sm">
-              18+ years experience in digital transformation and healthcare
-              systems, combining technical leadership and execution in regulated
-              environments.
-            </p>
-            <p className="text-sm">
-              Building Logis-Health as a Lithuania-based company with EU-wide
-              scalability.
-            </p>
-          </div>
-        </Card>
-      </div>
+      
 
       {/* CONTACT */}
       <div id="contact" className="mb-4">
