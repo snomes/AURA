@@ -5,11 +5,11 @@ import { Markdown } from 'components/markdown';
 import { getNetlifyContext } from 'utils';
 
 export const metadata = {
-    title: 'Image CDN'
+    title: 'Founding Team'
 };
 
-const sampleImage = '/images/corgi.jpg';
-
+//const sampleImage = '/images/corgi.jpg';
+/*
 const ctx = getNetlifyContext();
 const forceWebP = ctx === 'dev';
 const sampleImageSrcSet = [640, 1280, 2048]
@@ -45,7 +45,7 @@ Other than using \`next/image\` or rolling your own \`<img>\` tags, you can also
 />
 ~~~
 `;
-
+/*
 const devModeWarning = `
 In local development, optimization is performed locally without automatic format
 detection, so format is set to WebP.
@@ -114,5 +114,5 @@ export default function Page() {
                 </figure>
             </section>
         </div>
-    );
+    );*/
 }
