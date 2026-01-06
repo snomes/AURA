@@ -14,3 +14,10 @@ Founder & CEO with 18+ years of experience in healthcare digital transformation 
 Syed Hussnain Sajid — Founder & CEO
 Founder & CTO with 7 years of experience in healthcare technology, delivering digital solutions for home care, urgent care, and telemedicine. My work includes NPHIES-compliant systems, SaaS platforms, AI booking automation, data warehousing with Airflow and MinIO, ETL pipelines, Kafka integrations, and payments
     `;
+export default function Page() {
+    return (
+        <div className="flex flex-col gap-12 sm:gap-16">
+            <section>
+                    <Markdown content={originalVsCdnSnippet} className="mb-8" />
+            </section>
+            )};
