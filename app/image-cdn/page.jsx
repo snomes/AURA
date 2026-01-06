@@ -20,4 +20,5 @@ export default function Page() {
             <section>
                     <Markdown content={originalVsCdnSnippet} className="mb-8" />
             </section>
+        </div>
             )};
