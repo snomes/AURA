@@ -1,4 +1,7 @@
-import { Markdown } from 'components/markdown';
+ 
+import { FeedbackForm } from 'components/feedback-form';
+
+
 
 export const metadata = {
     title: 'Fallback'
@@ -18,8 +21,7 @@ There are advatanges to using Edge Functions directly, such as the ability to ac
 export default function FallbackPage() {
     return (
         <>
-            <h1 className="mb-8">You&apos;ve reached the fallback page.</h1>
-            <Markdown content={explainer} />
+             <div><FeedbackForm /></div>
         </>
     );
 }

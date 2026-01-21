@@ -119,7 +119,7 @@ export default function Page() {
        
 
       <footer className="text-xs text-gray-500 pt-6">
-        © {new Date().getFullYear()} Logis-Health. All rights reserved.
+        © {new Date().getFullYear()} AURA - Healthcare Continuity Platform. All rights reserved.
       </footer>
     </>
   );

@@ -74,30 +74,7 @@ export default function Page() {
       {/* HERO */}
       <div className="mb-10">
         <Markdown content={hero} className="mb-6" />
-        <div className="flex flex-wrap gap-3">
-          <a
-            href="mailto:snomes@gmail.com?subject=Logis-Health%20Pilot%20Discussion%20(Lithuania)
-"
-            className="px-4 py-2 rounded-md bg-black text-white"
-          >
-            Request a Pilot
-          </a>
-
-          {/* Replace href below once you add your PDF file into /public */}
-          <Link
-            href="/Logis-Health-1page.pdf"
-            className="px-4 py-2 rounded-md border border-gray-300"
-          >
-            Download 1-page summary (PDF)
-          </Link>
-
-          <Link
-            href="#contact"
-            className="px-4 py-2 rounded-md border border-gray-300"
-          >
-            Contact
-          </Link>
-        </div>
+        
       </div>
 
       {/* 2-column section */}
@@ -128,33 +105,9 @@ export default function Page() {
 
       </div>
 
-      
-
-      {/* CONTACT */}
-      <div id="contact" className="mb-4">
-        <Card title="Contact">
-          <div className="space-y-2 text-sm">
-            <p>
-              Email:{" "}
-              <a className="underline" href="mailto:snomes@gmail.com">
-                snomes@gmail.com
-              </a>
-            </p>
-            <p>Phone: +966 50 940 4979</p>
-            <p>
-              LinkedIn / Website: <span className="text-gray-500">(add link)</span>
-            </p>
-            <p className="pt-2 text-gray-600">
-              If you are a hospital, home care provider, or healthcare network
-              interested in pilots, please email with your organization name and
-              use case.
-            </p>
-          </div>
-        </Card>
-      </div>
-
+     
       <footer className="text-xs text-gray-500 pt-6">
-        © {new Date().getFullYear()} Logis-Health — Building in Lithuania for EU healthcare systems
+        © {new Date().getFullYear()} AURA - Healthcare Continuity Platform. All rights reserved. 
       </footer>
     </>
   );
