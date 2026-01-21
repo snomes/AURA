@@ -70,32 +70,7 @@ export default function Page() {
   return (
     <>
       {/* HERO */}
-      <div className="mb-10">
-        <Markdown content={hero} className="mb-6" />
-        <div className="flex flex-wrap gap-3">
-          <a
-            href="mailto:snomes@gmail.com?subject=Logis-Health%20Pilot%20Interest"
-            className="px-4 py-2 rounded-md bg-black text-white"
-          >
-            Request a Pilot
-          </a>
-
-          {/* Replace href below once you add your PDF file into /public */}
-          <Link
-            href="/Logis-Health-1page.pdf"
-            className="px-4 py-2 rounded-md border border-gray-300"
-          >
-            Download 1-page summary (PDF)
-          </Link>
-
-          <Link
-            href="#contact"
-            className="px-4 py-2 rounded-md border border-gray-300"
-          >
-            Contact
-          </Link>
-        </div>
-      </div>
+      
 
       {/* 2-column section */}
       <div className="grid gap-6 mb-10 md:grid-cols-2">
