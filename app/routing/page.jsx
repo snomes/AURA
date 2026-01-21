@@ -116,28 +116,7 @@ export default function Page() {
         </Card>
       </div>
 
-      {/* CONTACT */}
-      <div id="contact" className="mb-4">
-        <Card title="Contact">
-          <div className="space-y-2 text-sm">
-            <p>
-              Email:{" "}
-              <a className="underline" href="mailto:snomes@gmail.com">
-                snomes@gmail.com
-              </a>
-            </p>
-            <p>Phone: +966 50 940 4979</p>
-            <p>
-              LinkedIn / Website: <span className="text-gray-500">(add link)</span>
-            </p>
-            <p className="pt-2 text-gray-600">
-              If you are a hospital, home care provider, or healthcare network
-              interested in pilots, please email with your organization name and
-              use case.
-            </p>
-          </div>
-        </Card>
-      </div>
+       
 
       <footer className="text-xs text-gray-500 pt-6">
         © {new Date().getFullYear()} Logis-Health. All rights reserved.

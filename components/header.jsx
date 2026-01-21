@@ -1,13 +1,13 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import netlifyLogo from 'public/netlify-logo.svg';
-import githubLogo from 'public/images/github-mark-white.svg';
+
 
 const navItems = [
     { linkText: 'Home', href: '/' },
     { linkText: 'Product', href: '/revalidation' },
-    { linkText: 'Team', href: '/image-cdn' }
-   // { linkText: 'Edge Function', href: '/edge' },
+    { linkText: 'Team', href: '/image-cdn' },
+    { linkText: 'Request A Demo', href: '/edge' }
    // { linkText: 'Blobs', href: '/blobs' },
    // { linkText: 'Classics', href: '/classics' },
    // { linkText: 'Middleware', href: '/middleware' },
@@ -18,7 +18,7 @@ export function Header() {
     return (
         <nav className="flex flex-wrap items-center gap-4 pt-6 pb-12 sm:pt-12 md:pb-24">
             <Link href="/">
-                <Image src={netlifyLogo} alt="Netlify logo" />
+                <Image src={netlifyLogo} alt="AURA logo" />
             </Link>
             {!!navItems?.length && (
                 <ul className="flex flex-wrap gap-x-4 gap-y-1">
@@ -31,14 +31,7 @@ export function Header() {
                     ))}
                 </ul>
             )}
-            <Link
-                href="https://github.com/netlify-templates/next-platform-starter"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="ml-auto"
-            >
-                <Image src={githubLogo} alt="GitHub logo" className="w-7" />
-            </Link>
+            
         </nav>
     );
 }
