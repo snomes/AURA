@@ -22,7 +22,7 @@ export async function POST(req: NextRequest) {
     await resend.emails.send({
       from: FROM,
       to: TO,
-      subject: `New Feedback from ${name}`,
+      subject: `New Demo Request from ${name}`,
             text: `
 Name: ${name}
 Organization: ${organization}
