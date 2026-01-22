@@ -17,7 +17,7 @@ export async function POST(req: NextRequest) {
 
     // Hard-coded email addresses too
     const FROM = "onboarding@resend.dev";
-    const TO = "md.najam@gmail.com"; // <-- YOU RECEIVE EMAIL HERE
+    const TO = "snomes@gmail.com"; // <-- YOU RECEIVE EMAIL HERE
 
     await resend.emails.send({
       from: FROM,
