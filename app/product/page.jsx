@@ -25,15 +25,13 @@ export default function Page() {
       
 
       {/* 2-column section */}
-      <div className="grid gap-6 mb-10 md:grid-cols-1">
-        <Card title="AURA - Healthcare Continuity Platform">
-          <Markdown content={explainer} />
-        </Card>
-
-        
-      </div>
-
-      
+          <div className="flex flex-col gap-12 sm:gap-16">
+            <section>
+              <h2>Product Overview</h2>
+              <Markdown content={explainer} />
+            </section>
+               </div>
+         
       
 
        
